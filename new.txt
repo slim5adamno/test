@@ -2,4 +2,5 @@ new file
 git log --shortstat
 hello world
 this is new file
-and this is another file
+yet another line
+yet another line
