@@ -9,7 +9,7 @@ jobs:
       with: 
         fetch-depth: 2
     - name: get changed file
-      run: git diff --shortstat HEAD^ HEAD | cut -c 5-100 | grep -o -E "[0-9]+"
+      run: git diff --shortstat HEAD^ HEAD | cut -c 5-100 | grep -o -E "[0-9]+" > 1.txt
     - name: Commit and push if it changed
       run: |-
         git config user.name "Automated"
