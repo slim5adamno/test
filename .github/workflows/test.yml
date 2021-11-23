@@ -6,6 +6,8 @@ jobs:
     steps:
     - name: Check out this repo
       uses: actions/checkout@v2
+      with: 
+        fetch-depth: 2
     - name: get changed file
       run: git diff @~...@ > 1.txt
     - name: Commit and push if it changed
