@@ -1,7 +1,13 @@
-commit d54ea7b7f91a528dad380a18bbb5f9181cd2baaa
-Author: slim5adamno <vipsforeveralways@gmail.com>
-Date:   Tue Nov 23 20:17:48 2021 +0530
-
-    Update new.txt
-
- 3 files changed, 27 insertions(+)
+diff --git a/.github/workflows/test.yml b/.github/workflows/test.yml
+index 2412a4c..156287f 100644
+--- a/.github/workflows/test.yml
++++ b/.github/workflows/test.yml
+@@ -6,6 +6,8 @@ jobs:
+     steps:
+     - name: Check out this repo
+       uses: actions/checkout@v2
++      with: 
++        fetch-depth: 2
+     - name: get changed file
+       run: git diff @~...@ > 1.txt
+     - name: Commit and push if it changed
